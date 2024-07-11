@@ -4,8 +4,8 @@ set GASOLINA := {"SA", "AZ", "AM"};
 var x {p in PETROLEO, g in GASOLINA} >= 0;
 
 maximize lucro: (sum {p in PETROLEO} x[p, "SA"]) * 35 +
-                (sum {p in PETROLEO} x[p, "SA"]) * 28 +
-                (sum {p in PETROLEO} x[p, "SA"]) * 22 -
+                (sum {p in PETROLEO} x[p, "AZ"]) * 28 +
+                (sum {p in PETROLEO} x[p, "AM"]) * 22 -
                 (sum {g in GASOLINA} x[1, g]) * 19 -
                 (sum {g in GASOLINA} x[2, g]) * 24 -
                 (sum {g in GASOLINA} x[3, g]) * 20 -
